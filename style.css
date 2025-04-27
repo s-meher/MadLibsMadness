@@ -1,0 +1,116 @@
+/* General Page Styles */
+body {
+  margin: 0;
+  font-family: "Delius", sans-serif;
+  background: linear-gradient(200deg, skyblue, steelblue);
+  background-attachment: fixed;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Container Styling */
+#container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  max-width: 600px;
+  padding: 30px;
+  margin: 10vh auto;
+  transition: 0.3s ease-in-out;
+  border: 2px solid rgba(0, 127, 0, 0.6);
+}
+
+/* Heading Styles */
+h1 {
+  font-family: "Luckiest Guy", cursive;
+  color: rgb(0, 127, 0);
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "Luckiest Guy", cursive;
+  color: rgb(0, 127, 0);
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Input Fields */
+input {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid rgb(0, 127, 0);
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: steelblue;
+  box-shadow: 0px 0px 10px rgba(70, 130, 180, 0.6);
+}
+
+/* Button Styling */
+button {
+  background: rgb(0, 127, 0);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: rgb(0, 180, 0);
+  transform: scale(1.05);
+}
+
+/* Output Display */
+#output {
+  font-family: "Delius", sans-serif;
+  font-size: 20px;
+  color: rgb(0, 127, 0);
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 5px solid rgb(0, 127, 0);
+  display: inline-block;
+  text-align: left;
+}
+
+/* Clouds Background Effect */
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-radius: 100%;
+  background: transparent;
+  display: block;
+
+  box-shadow: 0 0 150px 100px rgba(255, 255, 255, 0.6),
+    200px 0 200px 150px rgba(255, 255, 255, 0.6),
+    -250px 0 300px 150px rgba(255, 255, 255, 0.6),
+    550px 0 300px 200px rgba(255, 255, 255, 0.6),
+    -550px 0 300px 200px rgba(255, 255, 255, 0.6);
+}
+
+/* Animating the container when the story is generated */
+#container.generated {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgb(0, 127, 0);
+}
