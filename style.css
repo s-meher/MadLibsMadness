@@ -114,3 +114,15 @@ body:after {
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid rgb(0, 127, 0);
 }
+
+@media (max-width: 480px) {
+  #container {
+    width: 90%;
+    padding: 20px;
+    margin: 5vh auto;
+  }
+
+  input {
+    width: 90%;
+  }
+}
