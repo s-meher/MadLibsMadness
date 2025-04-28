@@ -39,7 +39,6 @@ function addClassToElement(id, className) {
 function generate() {
   console.log("Button clicked.");
 
-  // Collecting words from user inputs
   let relative = formValue("relative");
   let adjective1 = formValue("adjective1");
   let adjective2 = formValue("adjective2");
@@ -49,7 +48,6 @@ function generate() {
   let dessert = formValue("dessert");
   let petName = formValue("petName");
 
-  // Creating the Mad Libs story using a template literal
   let story = `
     Dear ${relative},<br><br>
     I have been having a really ${adjective1} time at camp. 
@@ -60,9 +58,19 @@ function generate() {
     ${petName}
   `;
 
-  // Displaying the generated Mad Libs story inside the 'output' div
   document.getElementById("output").innerHTML = story;
 
-  // Adding a class to change the container's appearance after story generation
   addClassToElement("container", "generated");
+  launchConfetti(); // 🎉 Launch confetti when the story is generated!
 }
+
+
+
+function launchConfetti() {
+  confetti({
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
+}
+
